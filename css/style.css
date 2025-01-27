@@ -82,66 +82,121 @@ header{
     border-radius: 10px 10px 0px 0px;
     
 }
-
-
-#comentarios-clientes{
-  display: grid;
-  place-items: center;
-    height: auto;
-    background-color: rgb(234, 234, 234);
-    margin-top: 80px;
+/*porque elegirnos*/
+#porque-elegirnos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: rgb(233, 233, 233);
+  gap: 30px;
+  align-items: center;
+  width: 100%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 4rem 1rem;
 }
 
-.testimonials {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 60px; /* Incrementa el espacio entre tarjetas */
-    padding: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
+.izquierda{
+  min-width: 300px;
+  max-width: 700px;
+  padding: 20px;
   
-  
-  .testimonial {
-    background: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.486);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  
-  .profile-img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    margin-bottom: 15px;
-  }
-  
-  /* Nueva sección para la calificación */
-  .rating {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10px;
-  }
-  
-  .rating-text {
-    font-size: 16px;
-    font-weight: bold;
-    color: #333;
-    margin-right: 5px; /* Espacio entre el número y la estrella */
-  }
-  
-  .star-icon {
-    width: 20px; /* Ajusta el tamaño de la estrella */
-    height:20px;
-  }
+}
+
+.derecha{
+  min-width: 300px;
+  padding: 20px;
+}
 
 
+.titulo {
+  font-size: 2.7rem;
+  font-weight: bold;
+ 
+}
 
+.texto-principal {
+  font-size: 1.6rem;
+  color: #555;
+  
+}
+
+.opciones h5 {
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin: 0;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.opciones p {
+  font-size: 1.3rem;
+  color: #555;
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+.porque-elegirnos-derecha {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.porque-elegirnos-derecha svg {
+  margin-right: 10px;
+  width: 32px;
+  height: 32px;
+  color: #dbb014; /* Color del ícono */
+}
+
+
+/* Sección de comentarios de clientes */
+#comentarios-clientes {
+  display: grid;
+  place-items: center;
+  height: auto;
+  background-color: rgb(234, 234, 234);
+  margin-top: 80px;
+}
+
+/* Contenedor de tarjetas */
+.testimonios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 60px; /* Incrementa el espacio entre tarjetas */
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Estilo de las tarjetas */
+.testimonio {
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px; /* Bordes redondeados */
+  border: 2px solid transparent; /* Borde inicial transparente */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Efecto hover */
+.testimonio:hover {
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
+  border-color: #6b6b6b71; /* Cambia el borde a un color bonito */
+}
+
+/* Imagen de perfil */
+.foto-perfil {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+ 
+}
 
 footer{
     display: flex;
