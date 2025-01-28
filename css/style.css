@@ -1,7 +1,7 @@
 
 body{
     margin: 0;
-
+  
 }
 
 main{
@@ -26,16 +26,18 @@ header{
     justify-content: center;
     align-items:center;
     height: auto;
+    width: 100%;
     background-color: #ffffff; /*#fdd02e*/
     color: #1e0825;
     padding: 80px 20px 80px 20px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-sizing: border-box;
     
 }
 
 #contenedor-servicios{
     display: flex;
-    justify-content: center;
+    justify-content:center ;
     flex-wrap: wrap;
     gap: 32px;
     margin: 40px 0;
@@ -55,7 +57,8 @@ header{
     align-items: center;
     min-width: 300px;
     max-width: 400px;
-    height:50vh ;
+    height:55vh ;
+    box-sizing: border-box;
     box-shadow: 0 0 16px rgba(0, 0, 0, 0.462);
     background-color: #ffffff;
     border-radius: 20px;
@@ -82,23 +85,25 @@ header{
     border-radius: 10px 10px 0px 0px;
     
 }
+
 /*porque elegirnos*/
 #porque-elegirnos {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   background-color: rgb(233, 233, 233);
-  gap: 30px;
+  gap: 10px;
   align-items: center;
   width: 100%;
   margin-top: 40px;
   margin-bottom: 40px;
   padding: 4rem 1rem;
+  box-sizing: border-box;
 }
 
 .izquierda{
   min-width: 300px;
-  max-width: 700px;
+  max-width: 500px;
   padding: 20px;
   
 }
@@ -110,26 +115,26 @@ header{
 
 
 .titulo {
-  font-size: 2.7rem;
+  font-size: 2.5rem;
   font-weight: bold;
  
 }
 
 .texto-principal {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   color: #555;
   
 }
 
 .opciones h5 {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: bold;
   margin: 0;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .opciones p {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: #555;
   line-height: 1.6;
   margin-top: 10px;
@@ -151,11 +156,13 @@ header{
 
 /* Sección de comentarios de clientes */
 #comentarios-clientes {
-  display: grid;
-  place-items: center;
   height: auto;
   background-color: rgb(234, 234, 234);
   margin-top: 80px;
+}
+
+#comentarios-clientes h2{
+  margin: 40px 0  20px calc(50% - 135px);
 }
 
 /* Contenedor de tarjetas */
@@ -203,7 +210,8 @@ footer{
     flex-wrap: wrap;
     justify-content:space-around;
     align-items:flex-start;
-    background-color: #f6711f;
+    background-color: #d19513 ;
+    /* background: linear-gradient(90deg, #c27700, #d7ab0d, #b87800); */
     color: #333;
     padding: 20px;
     gap: 7px;
@@ -217,6 +225,7 @@ footer{
 
   .footer-aside img{
     width: 100px;
+    border-radius: 20px;
   }
   
   .footer-logo {
@@ -246,4 +255,45 @@ footer{
 
 
 
+
+
+
+#quienes-somos{
+  background-color: black;
+  padding: 16px;
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se apilen si no hay espacio */
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.imagen-quienes-somos {
+  flex: 1; /* Hace que la imagen ocupe espacio proporcionalmente */
+  min-width: 300px; /* Ancho mínimo para evitar que sea demasiado pequeño */
+  max-width: 400px; /* Ancho máximo para limitar el tamaño */
+  object-fit: cover;
+}
+
+.contenido-quienes-somos {
+  flex: 1; /* Hace que el contenido ocupe espacio proporcionalmente */
+  min-width: 300px; /* Ancho mínimo para mantener la legibilidad */
+  padding: 3%; /* p-4 */
+  text-align: left;
+}
+
+.titulo-quienes-somos {
+  margin-bottom: 0.5rem; /* mb-2 */
+  font-size: 2rem; /* text-2xl */
+  font-weight: bold;
+  color: #ffffff; /* Gray-900 */
+}
+
+.texto-quienes-somos {
+  margin-bottom: 0.75rem; /* mb-3 */
+  font-size: 1.3rem; /* font-normal */
+  color: #ffffff; /* Gray-700 */
+  text-align: justify;
+}
 
