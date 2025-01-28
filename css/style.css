@@ -18,8 +18,7 @@ header{
     position: sticky;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
+    gap: 20px;
 }
 
 #logo{
@@ -31,8 +30,12 @@ header{
 #tittle{
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 25px;
-  margin-right: 350px;
+  margin: 0;
   display: flex;
+}
+
+#btnbpox{
+  width: 55%;
 }
 
 .buttons ul{
@@ -88,10 +91,10 @@ a:hover::after {
   height: 90vh;
 }
 
-.content { 
+#content { 
   position: absolute;
-  top: 45%;
-  left: 50%;
+  top: 70%;
+  left: 40%;
   z-index: 3;
   color: #ffffff;
   display: flex;
@@ -100,22 +103,49 @@ a:hover::after {
   justify-content: space-evenly;
 }
 
-.content h1 {
+#content h1 {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 40px;
 }
 
-.content p {
+#content p {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 20px;
 }
 
-.content button {
+#content button {
   height: 48px;
   width: 125px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 18px;
   border-radius: 15px;
+}
+
+#equipo-recursos{
+  height: 25vh;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+#equipoyrecuros{
+  font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 2rem;
+}
+
+#description{
+  font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 1.3rem;
+}
+
+#listaequipos{
+  font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 1.2rem;
+}
+
+#description2{
+  font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 1.3rem;
 }
 
 #servicios{
