@@ -1,7 +1,7 @@
 
 body{
     margin: 0;
-
+  
 }
 
 main{
@@ -26,16 +26,18 @@ header{
     justify-content: center;
     align-items:center;
     height: auto;
+    width: 100%;
     background-color: #ffffff; /*#fdd02e*/
     color: #1e0825;
     padding: 80px 20px 80px 20px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-sizing: border-box;
     
 }
 
 #contenedor-servicios{
     display: flex;
-    justify-content: center;
+    justify-content:center ;
     flex-wrap: wrap;
     gap: 32px;
     margin: 40px 0;
@@ -55,7 +57,8 @@ header{
     align-items: center;
     min-width: 300px;
     max-width: 400px;
-    height:50vh ;
+    height:55vh ;
+    box-sizing: border-box;
     box-shadow: 0 0 16px rgba(0, 0, 0, 0.462);
     background-color: #ffffff;
     border-radius: 20px;
@@ -83,72 +86,132 @@ header{
     
 }
 
-
-#comentarios-clientes{
-  display: grid;
-  place-items: center;
-    height: auto;
-    background-color: rgb(234, 234, 234);
-    margin-top: 80px;
+/*porque elegirnos*/
+#porque-elegirnos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: rgb(233, 233, 233);
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 4rem 1rem;
+  box-sizing: border-box;
 }
 
-.testimonials {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 60px; /* Incrementa el espacio entre tarjetas */
-    padding: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
+.izquierda{
+  min-width: 300px;
+  max-width: 500px;
+  padding: 20px;
   
-  
-  .testimonial {
-    background: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.486);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  
-  .profile-img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    margin-bottom: 15px;
-  }
-  
-  /* Nueva sección para la calificación */
-  .rating {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10px;
-  }
-  
-  .rating-text {
-    font-size: 16px;
-    font-weight: bold;
-    color: #333;
-    margin-right: 5px; /* Espacio entre el número y la estrella */
-  }
-  
-  .star-icon {
-    width: 20px; /* Ajusta el tamaño de la estrella */
-    height:20px;
-  }
+}
+
+.derecha{
+  min-width: 300px;
+  padding: 20px;
+}
 
 
+.titulo {
+  font-size: 2.5rem;
+  font-weight: bold;
+ 
+}
 
+.texto-principal {
+  font-size: 1.5rem;
+  color: #555;
+  
+}
+
+.opciones h5 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.opciones p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+.porque-elegirnos-derecha {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.porque-elegirnos-derecha svg {
+  margin-right: 10px;
+  width: 32px;
+  height: 32px;
+  color: #dbb014; /* Color del ícono */
+}
+
+
+/* Sección de comentarios de clientes */
+#comentarios-clientes {
+  height: auto;
+  background-color: rgb(234, 234, 234);
+  margin-top: 80px;
+}
+
+#comentarios-clientes h2{
+  margin: 40px 0  20px calc(50% - 135px);
+}
+
+/* Contenedor de tarjetas */
+.testimonios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 60px; /* Incrementa el espacio entre tarjetas */
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Estilo de las tarjetas */
+.testimonio {
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px; /* Bordes redondeados */
+  border: 2px solid transparent; /* Borde inicial transparente */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Efecto hover */
+.testimonio:hover {
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
+  border-color: #6b6b6b71; /* Cambia el borde a un color bonito */
+}
+
+/* Imagen de perfil */
+.foto-perfil {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+ 
+}
 
 footer{
     display: flex;
     flex-wrap: wrap;
     justify-content:space-around;
     align-items:flex-start;
-    background-color: #f6711f;
+    background-color: #d19513 ;
+    /* background: linear-gradient(90deg, #c27700, #d7ab0d, #b87800); */
     color: #333;
     padding: 20px;
     gap: 7px;
@@ -162,6 +225,7 @@ footer{
 
   .footer-aside img{
     width: 100px;
+    border-radius: 20px;
   }
   
   .footer-logo {
@@ -191,4 +255,45 @@ footer{
 
 
 
+
+
+
+#quienes-somos{
+  background-color: black;
+  padding: 16px;
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se apilen si no hay espacio */
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.imagen-quienes-somos {
+  flex: 1; /* Hace que la imagen ocupe espacio proporcionalmente */
+  min-width: 300px; /* Ancho mínimo para evitar que sea demasiado pequeño */
+  max-width: 400px; /* Ancho máximo para limitar el tamaño */
+  object-fit: cover;
+}
+
+.contenido-quienes-somos {
+  flex: 1; /* Hace que el contenido ocupe espacio proporcionalmente */
+  min-width: 300px; /* Ancho mínimo para mantener la legibilidad */
+  padding: 3%; /* p-4 */
+  text-align: left;
+}
+
+.titulo-quienes-somos {
+  margin-bottom: 0.5rem; /* mb-2 */
+  font-size: 2rem; /* text-2xl */
+  font-weight: bold;
+  color: #ffffff; /* Gray-900 */
+}
+
+.texto-quienes-somos {
+  margin-bottom: 0.75rem; /* mb-3 */
+  font-size: 1.3rem; /* font-normal */
+  color: #ffffff; /* Gray-700 */
+  text-align: justify;
+}
 
