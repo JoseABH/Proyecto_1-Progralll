@@ -14,7 +14,7 @@ header{
     background: #dddddd;
     height: 10vh;
     top: 0;
-    z-index: 1000;
+    z-index: 5;
     position: sticky;
     display: flex;
     align-items: center;
@@ -74,22 +74,25 @@ a:hover::after {
 
 #hero{
     background-color: #333;
-    height: 53vh;
+    height: 90vh;
     position: relative;
     overflow: hidden;
+    
 }
 
-#background-video {
+#video {
   position: absolute;
   object-fit: cover; 
   z-index: 1;
+  width: 100%;
+  height: 90vh;
 }
 
 .content { 
   position: absolute;
-  top: 90%;
+  top: 45%;
   left: 50%;
-  transform: translate(-50%, -90%);
+  z-index: 3;
   color: #ffffff;
   display: flex;
   align-items: center;
@@ -179,6 +182,10 @@ a:hover::after {
     
 }
 
+#equipo-recursos{
+  background-color: #f2ff39;
+  height: 45vh;
+}
 
 #comentarios-clientes{
   display: grid;
