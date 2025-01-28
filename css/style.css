@@ -31,6 +31,7 @@ header{
     color: #1e0825;
     padding: 80px 20px 80px 20px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-sizing: border-box;
     
 }
 
@@ -56,7 +57,7 @@ header{
     align-items: center;
     min-width: 300px;
     max-width: 400px;
-    height:50vh ;
+    height:55vh ;
     box-sizing: border-box;
     box-shadow: 0 0 16px rgba(0, 0, 0, 0.462);
     background-color: #ffffff;
@@ -91,17 +92,18 @@ header{
   flex-wrap: wrap;
   justify-content: space-around;
   background-color: rgb(233, 233, 233);
-  gap: 30px;
+  gap: 10px;
   align-items: center;
   width: 100%;
   margin-top: 40px;
   margin-bottom: 40px;
   padding: 4rem 1rem;
+  box-sizing: border-box;
 }
 
 .izquierda{
   min-width: 300px;
-  max-width: 700px;
+  max-width: 500px;
   padding: 20px;
   
 }
@@ -113,26 +115,26 @@ header{
 
 
 .titulo {
-  font-size: 2.7rem;
+  font-size: 2.5rem;
   font-weight: bold;
  
 }
 
 .texto-principal {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   color: #555;
   
 }
 
 .opciones h5 {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: bold;
   margin: 0;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .opciones p {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: #555;
   line-height: 1.6;
   margin-top: 10px;
@@ -154,11 +156,13 @@ header{
 
 /* Sección de comentarios de clientes */
 #comentarios-clientes {
-  display: grid;
-  place-items: center;
   height: auto;
   background-color: rgb(234, 234, 234);
   margin-top: 80px;
+}
+
+#comentarios-clientes h2{
+  margin: 40px 0  20px calc(50% - 135px);
 }
 
 /* Contenedor de tarjetas */
@@ -261,6 +265,8 @@ footer{
   flex-wrap: wrap; /* Permite que los elementos se apilen si no hay espacio */
   align-items: center;
   justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .imagen-quienes-somos {
