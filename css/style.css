@@ -324,11 +324,13 @@ a:hover::after {
 
 #comentarios-clientes {
   height: auto;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(252, 249, 249);
+  
 }
 
 #comentarios-clientes h2 {
   margin: 40px 0 20px calc(50% - 135px);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .testimonios {
@@ -342,7 +344,7 @@ a:hover::after {
 }
 
 .testimonio {
-  background: #fff;
+  background: #f5f5f5;
   padding: 30px;
   border-radius: 15px;
 
