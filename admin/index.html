@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/admincss.css">
+  <title>Administrar Servicios</title>
+</head>
+<body>
+  <h1>Administracion seccion hero</h1>
+
+  <button id="btnAgregar5">Agregar Seccion</button>
+
+  <ul class="heroLista" id="hero"></ul>
+
+ 
+  <div id="modal5" class="modal5">
+      <div class="modal-content">
+          <span class="close5">&times;</span>
+          <h2 id="formTitle5">Nueva Seccion Porque Elegirnos</h2>
+          <form id="heroForm">
+              <input type="hidden" id="heroId">
+
+              <label for="heroTitulo">Titulo:</label>
+              <input type="text" id="heroTitulo" required>
+
+              <label for="heroDescripcion">Descripción:</label>
+              <textarea id="heroDescripcion" required></textarea>
+
+
+
+              <label for="heroBtnSeccionTitulo">Titulo btn seccion:</label>
+              <textarea id="heroBtnSeccionTitulo" required></textarea>
+              <label for="heroBtnSeccionUrl">Url btn seccion:</label>
+              <textarea id="heroBtnSeccionUrl" required></textarea>
+
+
+
+              <label for="heroBtnRedSocialTitulo">Titulo red social btn:</label>
+              <textarea id="heroBtnRedSocialTitulo" required></textarea>
+              <label for="heroBtnRedSocialUrl">Url red social btn:</label>
+              <textarea id="heroBtnRedSocialUrl" required></textarea>
+
+
+
+              <label for="heroVideoUrl">URL del video:</label>
+              <input type="text" id="heroVideoUrl" required>
+
+              <button type="submit">Guardar</button>
+          </form>
+      </div>
+  </div>
+<hr>
+<hr>
+<hr>
+<hr>
+  <h1>Administrar Servicios</h1>
+
+  <button id="btnAbrirModal" class="btn btn-agregar">Agregar Servicio</button>
+
+  <div id="listaServicios"></div>
+
+ 
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 id="modalTitulo">Agregar Servicio</h2>
+      <form id="servicioForm">
+        <input type="hidden" id="servicioId">
+        <label for="titulo">Título</label>
+        <input type="text" id="titulo" required><br>
+
+        <label for="descripcion">Descripción</label>
+        <textarea id="descripcion" required></textarea><br>
+
+        <label for="imagen_url">URL Imagen</label>
+        <input type="text" id="imagen_url" required><br>
+
+        <label for="whatsapp">Enlace WhatsApp</label>
+        <input type="text" id="whatsapp" required><br>
+
+        <button type="submit" id="submitButton">Guardar</button>
+      </form>
+    </div>
+  </div>
+
+
+  <hr>
+  <hr>
+  <hr>
+  <h1>Administración de Seccion Quienes Somos</h1>
+
+  <button id="btnAgregar3">Agregar Seccion</button>
+
+  <ul class="quienesSomosLista" id="quienesSomos"></ul>
+
+ 
+  <div id="modal3" class="modal3">
+      <div class="modal-content">
+          <span class="close3">&times;</span>
+          <h2 id="formTitle3">Nueva Seccion Quienes Somos</h2>
+          <form id="quienesSomosForm">
+              <input type="hidden" id="quienesSomosId">
+              
+              <label for="quienesSomosTitulo">Titulo:</label>
+              <input type="text" id="quienesSomosTitulo" required>
+
+              <label for="quienesSomosDescripcion">Descripción:</label>
+              <textarea id="quienesSomosDescripcion" required></textarea>
+
+              <label for="quienesSomosImagen_url">URL de la Imagen:</label>
+              <input type="text" id="quienesSomosImagen_url2" required>
+
+              <button type="submit">Guardar</button>
+          </form>
+      </div>
+  </div> 
+  <hr>
+  <hr>
+  <hr>
+  <hr>
+  <h1>Administración de Seccion Porque Elegirnos</h1>
+
+  <button id="btnAgregar4">Agregar Seccion</button>
+
+  <ul class="porqueElegirnosLista" id="porqueElegirnos"></ul>
+
+ 
+  <div id="modal4" class="modal4">
+      <div class="modal-content">
+          <span class="close4">&times;</span>
+          <h2 id="formTitle4">Nueva Seccion Porque Elegirnos</h2>
+          <form id="porqueElegirnosForm">
+              <input type="hidden" id="porqueElegirnosId">
+              
+              <label for="porqueElegirnosTitulo">Titulo:</label>
+              <input type="text" id="porqueElegirnosTitulo" required>
+
+              <label for="porqueElegirnosDescripcion">Descripción:</label>
+              <textarea id="porqueElegirnosDescripcion" required></textarea>
+
+              <label for="porqueElegirnosImagen_url">URL de la Imagen:</label>
+              <input type="text" id="porqueElegirnosImagen_url2" required>
+
+              <button type="submit">Guardar</button>
+          </form>
+      </div>
+  </div> 
+  <hr>
+  <hr>
+  <hr>
+  <hr>
+  
+  <h1>Administración de Testimonios</h1>
+
+  <button id="btnAgregar2">Agregar Testimonio</button>
+
+  <ul class="testimonios-lista" id="testimonios"></ul>
+
+
+  <div id="modal2" class="modal2">
+      <div class="modal-content">
+          <span class="close2">&times;</span>
+          <h2 id="formTitle">Nuevo Testimonio</h2>
+          <form id="testimonioForm">
+              <input type="hidden" id="testimonioId">
+              
+              <label for="nombre">Nombre:</label>
+              <input type="text" id="nombre" required>
+
+              <label for="comentario">Comentario:</label>
+              <textarea id="comentario" required></textarea>
+
+              <label for="imagen_url">URL de la Imagen:</label>
+              <input type="text" id="imagen_url2" required>
+
+              <button type="submit">Guardar</button>
+          </form>
+      </div>
+  </div>
+  <hr>
+  <hr>
+  <hr>
+  <hr>
+  
+  <script src="js/main.js"></script>
+</body>
+</html>
