@@ -72,11 +72,15 @@ button {
     margin-bottom: 20px;
 }
 
+.btnSumit{
+    margin-top: 20px;
+}
+
 button:hover {
     background-color: #218838;
 }
 
-.testimonios-lista,.quienesSomosLista,.porqueElegirnosLista,.heroLista {
+.testimonios-lista,.quienesSomosLista,.porqueElegirnosLista,.heroLista,.equipoRecursosLista {
     list-style: none;
     padding: 0;
     max-width: 600px;
@@ -84,7 +88,7 @@ button:hover {
 }
 
 .testimonio-item , .quienesSomos-item
- ,.servicio-item,.porqueElegirnosItem,.hero-item
+ ,.servicio-item,.porqueElegirnosItem,.hero-item,.equipoRecursos-item
  {
     display: flex;
     align-items: center;
@@ -93,6 +97,12 @@ button:hover {
     padding: 10px;
     border-radius: 10px;
     margin-bottom: 10px;
+}
+
+.equipoRecursos-icono{
+    width: 40px;
+    height: 40px;
+    margin: 10px;
 }
 
 .testimonio-info, .porqueElegirnos-info, .hero-info {
@@ -122,7 +132,7 @@ button:hover {
 }
 
 /* MODAL */
-.modal2,.modal3,.modal4, .modal5{
+.modal2,.modal3,.modal4, .modal5,.modal6{
     display: none;
     position: fixed;
     z-index: 1;
@@ -136,6 +146,7 @@ button:hover {
 }
 
 .modal-content {
+    
     background-color: white;
     padding: 20px;
     border-radius: 10px;
@@ -144,7 +155,7 @@ button:hover {
     text-align: left;
 }
 
-.close2, .close3,.close4,.close5 {
+.close2, .close3,.close4,.close5,.close6  {
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -161,16 +172,25 @@ button:hover {
 .imagenPorqueElegirno{
     width: 32px;
     height: 32px;
+    margin: 10px;
 }
 
 .imagenQuienesSomo{
     width: 100px;
     height: 100px;
     object-fit: cover;
+    margin: 10px;
 
 }
 
 
 video{
  width: 200px;
+ margin: 10px;
+}
+
+form{
+    display: flex;
+   flex-direction: column;
+
 }

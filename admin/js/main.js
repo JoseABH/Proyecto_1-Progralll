@@ -627,10 +627,114 @@ async function guardarSeccionHero(event) {
 
 
 
+const API_URL6 = "http://localhost:3000/equipo-recursos";
 
 
+async function cargarEquipoRecursos() {
+    try {
+        const response = await fetch(API_URL6);
+        const equipoyrecursos = await response.json();
+        const contenedor = document.getElementById("equipoRecursos");
+        contenedor.innerHTML = '';
 
+        equipoyrecursos.forEach(equiporecursos => {
+            
+            const li = document.createElement("div"); // O usa "li" si lo necesitas como lista
+            li.classList.add("equipoRecursos-item");
 
+            li.innerHTML = `
+            <img src="${equiporecursos.iconos}" alt="icono" class="equipoRecursos-icono">
+                <span class="equipoRecursos-texto">${equiporecursos.texto}</span>
+            <div>
+                <button class="btn-editar" onclick="abrirModal6(${equiporecursos.id}, '${equiporecursos.texto}', '${equiporecursos.iconos}')">Editar</button>
+                <button class="btn-eliminar" onclick="eliminarEquipoRecursos(${equiporecursos.id})">Eliminar</button>
+            </div>
+            `;
+            contenedor.appendChild(li);
+        });
+
+    } catch (error) {
+        console.error("Error al cargar equipo y recursos:", error);
+    }
+}
+
+function abrirModal6(id = "", texto = "", iconos = "") {
+    document.getElementById("equipoRecursosId").value = id;
+    document.getElementById("equipoRecursosTexto").value = texto;
+    document.getElementById("equipoRecursosIconos").value = iconos;
+    document.getElementById("formTitle6").innerText = id ? "Editar Seccion equipo y recursos" : "Nueva Seccion equipo y recursos";
+  
+    document.getElementById("modal6").style.display = "flex";
+  }
+
+  function cerrarModal6() {
+    document.getElementById("modal6").style.display = "none";
+    document.getElementById("equipoRecursosForm").reset();
+    document.getElementById("equipoRecursosId").value = "";
+  }
+
+  async function eliminarEquipoRecursos(id) {
+    if (confirm("¿Estás seguro de eliminar esta seccion?")) {
+        try {
+            await fetch(`${API_URL6}/${id}`, {
+                method: "DELETE"
+            });
+            cargarEquipoRecursos();
+        } catch (error) {
+            console.error("Error al eliminar la seccion:", error);
+        }
+    }
+  }
+
+  async function guardarEquipoRecursos(event) {
+    event.preventDefault();
+  
+    const id = document.getElementById("equipoRecursosId").value;
+    const texto = document.getElementById("equipoRecursosTexto").value;
+    const iconos = document.getElementById("equipoRecursosIconos").value;
+
+    const equipoRecursos = { texto, iconos};
+  
+    try {
+        if (id) {
+            await fetch(`${API_URL6}/${id}`, {
+                method: "PUT",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(equipoRecursos)
+            });
+            alert('Seccion Equipo y Recursos Actualizada')
+        } else {
+          const response = await fetch(API_URL6, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(equipoRecursos)
+            });
+  
+            if (!response.ok) {
+              const errorData = await response.json().catch(() => ({}));
+              let errorMessage = errorData.message || errorData.error || response.statusText;
+        
+              if (response.status === 409) {
+                errorMessage = "Ya existe una sección 'Equipo y Recursos'. Solo se permite una.";
+              }
+        
+             alert( errorMessage);
+            }else{
+               alert('Seccion Equipos y Recursos agregado');
+            }
+           
+        }
+  
+       
+        
+        cerrarModal6();
+        cargarEquipoRecursos();
+       
+  
+    } catch (error) {
+        console.error("Error al guardar Equipos y Recursos:", error);
+    }
+  }
 
 
 
@@ -665,5 +769,13 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("quienesSomosForm").addEventListener("submit", guardarSeccionQuienesSomos);
     document.getElementById("porqueElegirnosForm").addEventListener("submit", guardarSeccionPorqueElegirnos);
     document.getElementById("heroForm").addEventListener("submit", guardarSeccionHero);
+
+
+
+
+    cargarEquipoRecursos();
+    document.getElementById("btnAgregar6").addEventListener("click", () => abrirModal6());
+    document.querySelector(".close6").addEventListener("click", cerrarModal6);
+    document.getElementById("equipoRecursosForm").addEventListener("submit", guardarEquipoRecursos);
 
 });
