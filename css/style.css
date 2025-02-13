@@ -160,18 +160,24 @@ header {
 
 #content h1 {
   font-family:var(--fuente-principal);
-  font-size: 40px;
+  font-size: 4rem;
+  color: #ffd500;
+  font-weight:bold;
+  margin-bottom: 5px;
+  font-variant: small-caps;
 }
 
 #content p {
   font-family: var(--fuente-principal);
-  font-size: 20px;
+  font-size: 1.6rem;
+  margin-bottom: 60px;
+  font-style: italic;
 }
 
 .btnhero {
   font-family:var(--fuente-principal);
   font-size: 18px;
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 10px 30px;
   border: none;
   text-decoration: none;
@@ -179,23 +185,26 @@ header {
 }
 
 .btn1{
-  background-color: rgb(255, 200, 0);
+  background-color: #ff9500;
   color: #000000;
 }
 
 .btn2{
-  background-color: #1a9e06;
+  background-color: #ffd000;
   margin-top: 10px;
   color: #152e00;
+  display: flex;
+  gap: 5px;
+  align-items: center;
 }
 
 .btn1:hover {
-  background-color: rgb(255, 157, 0);
+  background-color: #ff9d00;
   color: #ffffff;
 }
 
 .btn2:hover {
-  background-color: #1dda00;
+  background-color: #ff9d00;
   color: #ffffff;
 }
 
@@ -208,13 +217,13 @@ header {
   align-items: center;
   background-color: #ffffff;
   color: #fff;
-  padding: 50px 32px;
+  padding: 80px 32px;
 }
 
 #equipoyrecuros {
   font-size: 2.5rem;
   font-weight: bold;
-  color: #d28900;
+  color: #e3ae00;
   margin-bottom: 20px;
   letter-spacing: 2px;
   font-family: var(--fuente-principal);
@@ -238,13 +247,13 @@ header {
 #listaequipos li {
   display: flex;
   align-items: center;
+  background-color: #0000001a;
   list-style: none;
   font-size: 1.1rem;
-  
+  font-style: italic;
   padding: 12px 20px;
   margin: 10px 0;
-  border-radius: 10px;
-  color: #d28900;
+  color: #c29500;
   font-family: var(--fuente-principal);
   gap: 10px;
 }
@@ -307,7 +316,7 @@ header {
   font-family: var(--fuente-principal);
   font-size: 18px;
   border-radius: 10px;
-  background-color: rgb(227, 174, 0);
+  background-color: #e3ae00;
   color: #ffffff;
   padding: 10px 30px;
   margin-bottom: 10px;
@@ -348,9 +357,6 @@ header {
 
 /*********************** SECCION DE PORQUE ELEGIRNOS  ********************** */
 #porque-elegirnos {
-  /* position: relative; */
-  /* background-image: url(/img/s3.jpg);
-  background-attachment: fixed; */
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -358,18 +364,9 @@ header {
   gap: 10px;
   align-items: center;
   width: 100%;
-
-  padding: 4rem 1rem;
+  padding: 5rem 1rem;
   box-sizing: border-box;
 }
-/* #porque-elegirnos::after{
-  content: "";
-  position: absolute;
-  
-  width: 100%;
-  height: 100%;
-  background-color: rgba(222, 222, 222, 0.901);
-} */
 
 .izquierda {
   min-width: 300px;
@@ -427,6 +424,7 @@ header {
 #comentarios-clientes {
   height: auto;
   background-color: rgb(252, 249, 249);
+  padding: 80px 0;
   
 }
 
@@ -448,7 +446,7 @@ header {
 .testimonio {
   background: #f5f5f5;
   padding: 30px;
-  border-radius: 15px;
+  border-radius: 6px;
   border: 2px solid transparent;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   display: flex;
@@ -562,74 +560,3 @@ footer {
   text-decoration: underline;
   color: #005599;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.crud-container {
-  display: flex;
-  gap: 5px;
-  width: 100%;
-  
-  background-color: #00000060;
-  padding:5px;
-  position:sticky;
-  z-index: 4;
-  top: 10vh;
-  border-radius: 0 0 10px 10px;
-
-}
-
-.crud-btn {
-  padding: 12px 20px;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-  border-radius: 8px;
-  transition: background-color 0.3s ease;
-}
-
-.crud-btn:hover {
-  opacity: 0.8;
-}
-
-/* Botones específicos */
-.create {
-  background-color: #28a745;
-  color: white;
-}
-
-.read {
-  background-color: #007bff;
-  color: white;
-}
-
-.update {
-  background-color: #ffc107;
-  color: white;
-}
-
-.delete {
-  background-color: #dc3545;
-  color: white;
-}
-
-
-
-
